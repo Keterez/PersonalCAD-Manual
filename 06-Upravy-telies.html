@@ -1,0 +1,272 @@
+<!doctype html><html lang="sk" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Úpravy telies · PersonalCAD</title><meta name="description" content="Úpravy telies — podrobný manuál PersonalCAD 0.2.5 s postupmi a skutočnými snímkami aplikácie."><meta name="color-scheme" content="dark light"><meta name="theme-color" content="#161616"><link rel="canonical" href="https://keterez.github.io/PersonalCAD-Manual/06-Upravy-telies.html"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/site.css"><script src="assets/theme.js"></script><script defer src="assets/site.js"></script></head><body>
+<a class="skip-link" href="#main">Preskočiť na obsah</a><header class="site-header"><button class="icon-button menu-toggle" id="menuToggle" aria-label="Otvoriť obsah" aria-expanded="false" aria-controls="sidebar"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><a class="wordmark" href="index.html"><svg viewBox="0 0 28 28" aria-hidden="true"><path d="m14 3 10 6v11l-10 6-10-6V9Z M4 9l10 6 10-6M14 15v11"/></svg><strong>PersonalCAD</strong><span>Príručka</span></a><span class="version">0.2.5</span><button id="searchOpen" class="search-trigger"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m15.5 15.5 4 4"/></svg><span>Hľadať v príručke</span><kbd>Ctrl K</kbd></button><button id="themeToggle" class="icon-button" aria-label="Prepnúť na svetlý vzhľad"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button></header>
+<div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div><aside class="sidebar" id="sidebar"><nav aria-label="Kapitoly príručky"><a class="overview-link" href="index.html">Obsah príručky</a><section class="nav-group"><h2>Začíname</h2><a href="01-Prve-spustenie.html"><span class="chapter-number">01</span><span>Prvé spustenie</span></a><a href="02-Ovladanie-a-skratky.html"><span class="chapter-number">02</span><span>Ovládanie a skratky</span></a><a href="03-Browser-a-historia.html"><span class="chapter-number">03</span><span>Browser a história</span></a></section><section class="nav-group"><h2>3D modelovanie</h2><a href="04-Skice-a-koty.html"><span class="chapter-number">04</span><span>Skice a kóty</span></a><a href="05-3D-modelovanie.html"><span class="chapter-number">05</span><span>3D modelovanie</span></a><a href="06-Upravy-telies.html" aria-current="page"><span class="chapter-number">06</span><span>Úpravy telies</span></a><a href="07-Zostavy-a-pohyb.html"><span class="chapter-number">07</span><span>Zostavy a pohyb</span></a><a href="08-Vzhlad-a-vlastnosti.html"><span class="chapter-number">08</span><span>Vzhľad a vlastnosti</span></a><a href="09-Import-export-a-subory.html"><span class="chapter-number">09</span><span>Import a export</span></a></section><section class="nav-group"><h2>Elektronika</h2><a href="10-Schema-PCB.html"><span class="chapter-number">10</span><span>Schéma PCB</span></a><a href="11-Navrh-PCB.html"><span class="chapter-number">11</span><span>Návrh PCB</span></a><a href="12-Kniznica-komponentov.html"><span class="chapter-number">12</span><span>Knižnica komponentov</span></a><a href="13-Elektricke-vykresy.html"><span class="chapter-number">13</span><span>Elektrické výkresy</span></a><a href="14-Vyrobne-podklady.html"><span class="chapter-number">14</span><span>Výrobné podklady</span></a></section><section class="nav-group"><h2>Projekty a aplikácia</h2><a href="15-Projekty-a-synchronizacia.html"><span class="chapter-number">15</span><span>Projekty a synchronizácia</span></a><a href="16-Instalacia-a-aktualizacie.html"><span class="chapter-number">16</span><span>Inštalácia a aktualizácie</span></a><a href="17-Riesenie-problemov.html"><span class="chapter-number">17</span><span>Riešenie problémov</span></a></section><section class="nav-group"><h2>Praktické návody</h2><a href="18-Tutorial-3D-drziak.html"><span class="chapter-number">18</span><span>Tutoriál: 3D model</span></a><a href="19-Tutorial-schema-a-PCB.html"><span class="chapter-number">19</span><span>Tutoriál: schéma a PCB</span></a></section><section class="nav-group"><h2>Referencia</h2><a href="20-Slovnik-a-prehlad-funkcii.html"><span class="chapter-number">20</span><span>Slovník a funkcie</span></a></section></nav><div class="sidebar-footer"><span>Manuál k vývojovej verzii</span><a href="https://github.com/Keterez/PersonalCAD-Manual">Manuál na GitHube ↗</a></div></aside>
+<div class="page-layout"><main id="main" tabindex="-1"><div class="breadcrumb"><a href="index.html">Príručka</a><span>/</span><span>06 · Úpravy telies</span></div><details class="mobile-toc"><summary>Na tejto stránke</summary><ol><li><a href="#obsah">Obsah</a></li><li><a href="#spoločné-pravidlá-a-výber-cieľa">Spoločné pravidlá a výber cieľa</a></li><li><a href="#fillet-a-chamfer--hrany-objemu">Fillet a Chamfer — hrany objemu</a></li><li><a href="#shell--duté-teleso">Shell — duté teleso</a></li><li><a href="#draft--úkos-stien">Draft — úkos stien</a></li><li><a href="#press-pull--offset-face--q">Press Pull / Offset Face — Q</a></li><li><a href="#delete-face--heal--odstránenie-detailu-a-zacelenie">Delete Face / Heal — odstránenie detailu a zacelenie</a></li><li><a href="#movecopy-move--rotate-a-obyčajné-potiahnutie">Move/Copy, Move / Rotate a obyčajné potiahnutie</a></li><li><a href="#scale--jednotná-zmena-mierky-telesa">Scale — jednotná zmena mierky telesa</a></li><li><a href="#vzory-telies">Vzory telies</a></li><li><a href="#mirror--zrkadlenie-telesa">Mirror — zrkadlenie telesa</a></li><li><a href="#split-body--rozdelenie-telesa-rovinou">Split Body — rozdelenie telesa rovinou</a></li><li><a href="#combine--booleovské-operácie">Combine — booleovské operácie</a></li><li><a href="#thread--tlačiteľný-závit">Thread — tlačiteľný závit</a></li><li><a href="#edit-gear--rack--existujúce-parametrické-ozubenie">Edit Gear / Rack — existujúce parametrické ozubenie</a></li><li><a href="#delete-body--odstránenie-celého-telesa">Delete Body — odstránenie celého telesa</a></li><li><a href="#editácia-uloženie-a-riešenie-chýb">Editácia, uloženie a riešenie chýb</a></li></ol></details><article class="prose"><h1 id="úpravy-telies">Úpravy telies</h1>
+<p>Kapitola opisuje aktuálne vývojové zdroje <strong>PersonalCAD 0.2.5</strong>. Predpokladá už vytvorené alebo podporované importované teleso s výpočtovým predpisom. Skicové nástroje rovnakého mena, napríklad Sketch Fillet alebo Sketch Scale, sú samostatné operácie v <a href="04-Skice-a-koty.html">kapitole 04</a>.</p>
+<h2 id="obsah">Obsah<a class="heading-link" href="#obsah" aria-label="Odkaz na sekciu Obsah">#</a></h2>
+<ul>
+<li><a href="#pravidla">Spoločné pravidlá a výber cieľa</a></li>
+<li><a href="#fillet-chamfer">Fillet a Chamfer</a></li>
+<li><a href="#shell">Shell</a></li>
+<li><a href="#draft">Draft</a></li>
+<li><a href="#offset-face">Press Pull / Offset Face</a></li>
+<li><a href="#delete-face">Delete Face / Heal</a></li>
+<li><a href="#move">Move/Copy a priame presúvanie</a></li>
+<li><a href="#scale">Scale</a></li>
+<li><a href="#patterns">Rectangular Pattern a Circular Pattern</a></li>
+<li><a href="#mirror">Mirror</a></li>
+<li><a href="#split">Split Body</a></li>
+<li><a href="#combine">Combine a Join All Bodies</a></li>
+<li><a href="#thread">Thread</a></li>
+<li><a href="#gear">Edit Gear / Rack</a></li>
+<li><a href="#delete-body">Odstránenie celého telesa</a></li>
+<li><a href="#chyby">Editácia, uloženie a riešenie chýb</a></li>
+</ul>
+<p><a name="pravidla"></a></p>
+<h2 id="spoločné-pravidlá-a-výber-cieľa">Spoločné pravidlá a výber cieľa<a class="heading-link" href="#spoločné-pravidlá-a-výber-cieľa" aria-label="Odkaz na sekciu Spoločné pravidlá a výber cieľa">#</a></h2>
+<p>Väčšina úprav je v <strong>SOLID → MODIFY</strong>; vzory a Mirror sa zaraďujú medzi <strong>CREATE</strong>. Ak ikonu nevidíte, rozbaľte skupinu alebo stlačte <strong>S</strong> a vyhľadajte anglický názov.</p>
+<p>Pri príkazoch s panelom zmena polí alebo výberu spravidla vytvára náhľad. <strong>OK</strong> potvrdí, <strong>Cancel/Esc pred potvrdením</strong> ho zruší. <strong>Enter</strong> v podporovaných vstupných poliach vyvolá potvrdenie; pri samostatných zoznamoch alebo ak si nie ste istí, použite viditeľné tlačidlo. Hotovú úpravu vráti <strong>Undo</strong>, obnoví <strong>Redo</strong> a uloží <strong>File → Save</strong> do <code>.pcad</code>.</p>
+<p><strong>Esc po dokončení operáciu nevymaže.</strong> Okamžité príkazy, ako Join All Bodies, Delete Body alebo priamy ukončený ťah, nemajú ďalšie čakanie na OK; na ich vrátenie slúži Undo.</p>
+<h3 id="dôležitý-limit-aktuálneho-výberu">Dôležitý limit aktuálneho výberu<a class="heading-link" href="#dôležitý-limit-aktuálneho-výberu" aria-label="Odkaz na sekciu Dôležitý limit aktuálneho výberu">#</a></h3>
+<p><strong>Fillet, Chamfer, Shell a Draft pri novom spustení v aktuálnom rozhraní pracujú s naposledy vytvoreným telesom v zozname Bodies.</strong> Nemajú plnohodnotný samostatný výber iného cieľa v paneli a obyčajné predvybranie staršieho Body v Browseri nemožno považovať za spoľahlivé presmerovanie týchto štyroch nástrojov.</p>
+<p>Na jednom telese je postup jednoznačný. Pri viacdielovom návrhu sledujte, ktoré hrany/plochy sa skutočne ponúkajú. Tieto úpravy je praktické urobiť ešte pred vytvorením ďalšieho telesa, prípadne v samostatnom dokumente dielu. Neskoršia <strong>editácia existujúcej operácie</strong> cez jej konkrétnu položku histórie je odlišný postup a pozná jej uloženého vlastníka.</p>
+<p><strong>Hole, Extrude Face, Press Pull/Offset Face a Delete Face/Heal</strong> už vyberajú skutočné kliknuté teleso. <strong>Move/Copy, Scale, Split, Combine a vzory</strong> majú vlastné pravidlá výberu opísané nižšie. Rovnaká farba hoveru preto neznamená, že všetky príkazy používajú rovnaký výberový mechanizmus.</p>
+<p><a name="fillet-chamfer"></a></p>
+<h2 id="fillet-a-chamfer--hrany-objemu">Fillet a Chamfer — hrany objemu<a class="heading-link" href="#fillet-a-chamfer--hrany-objemu" aria-label="Odkaz na sekciu Fillet a Chamfer — hrany objemu">#</a></h2>
+<h3 id="fillet">Fillet<a class="heading-link" href="#fillet" aria-label="Odkaz na sekciu Fillet">#</a></h3>
+<p><strong>Účel:</strong> nahradiť ostrú hranu kruhovým zaoblením.</p>
+<ol>
+<li>V režime Design zvoľte <strong>MODIFY → Fillet</strong>.</li>
+<li>Kliknite na jednu alebo viac ponúknutých hrán cieľového telesa. Klik na už vybranú hranu ju odoberie; aktuálny počet je v <strong>Edges</strong>.</li>
+<li>Zadajte kladný <strong>Radius</strong>.</li>
+<li>Počkajte na náhľad. Ak je platný a zasahuje správne hrany, potvrďte <strong>OK</strong>.</li>
+</ol>
+<p><strong>Cancel/Esc</strong> odstráni rozpracovaný náhľad, <strong>Undo/Redo</strong> vracia hotový krok. Recept a podporované geometrické odkazy sa ukladajú do <code>.pcad</code>; rozmer konkrétneho Fillet možno upraviť cez <strong>Edit Feature</strong>.</p>
+<p><strong>Limity:</strong> platí <a href="#pravidla">výber posledného telesa</a>. Príliš veľký polomer, tenká stena, kolízia viacerých zaoblení alebo nejednoznačná hrana po zmene topológie môže výpočet odmietnuť. Nástroj neposkytuje všeobecný variable-radius fillet, úplné tangent-chain/G2 riadenie ani automatickú opravu každej siete zaoblení.</p>
+<h3 id="chamfer">Chamfer<a class="heading-link" href="#chamfer" aria-label="Odkaz na sekciu Chamfer">#</a></h3>
+<p><strong>Účel:</strong> vytvoriť rovinné zrazenie namiesto ostrej hrany.</p>
+<ol>
+<li>Zvoľte <strong>MODIFY → Chamfer</strong>.</li>
+<li>Kliknutím vyberte/odoberte hrany.</li>
+<li>Do <strong>Distance</strong> zadajte kladnú veľkosť zrazenia.</li>
+<li>Skontrolujte náhľad a potvrďte <strong>OK</strong>; <strong>Cancel/Esc</strong> ho pred potvrdením zahodí.</li>
+</ol>
+<p>Dokončenie má <strong>Undo/Redo</strong>, <code>.pcad</code> uchová predpis a <strong>Edit Feature</strong> mení podporovaný rozmer. Platí rovnaký limit cieľového telesa a topologických odkazov ako pri Fillet. Tento panel neponúka úplnú sadu asymetrických dvojvzdialenostných alebo distance-angle chamferov.</p>
+<p>Pre hranu montážnej platničky z <a href="05-3D-modelovanie.html#priklad">príkladu</a> začnite napríklad hodnotou <strong>0.5 mm</strong>. Náhľad musí ukazovať zrazenie objemu; klik na skicový roh v režime Sketch by spustil iný nástroj.</p>
+<p><a name="shell"></a></p>
+<h2 id="shell--duté-teleso">Shell — duté teleso<a class="heading-link" href="#shell--duté-teleso" aria-label="Odkaz na sekciu Shell — duté teleso">#</a></h2>
+<p><strong>Účel:</strong> odstrániť vybrané steny a vytvoriť dutinu s určenou hrúbkou zvyšných stien, napríklad otvorenú krabičku.</p>
+<ol>
+<li>Na vhodnom cieľovom telese zvoľte <strong>MODIFY → Shell</strong>.</li>
+<li>Kliknite na plochu, ktorá sa má <strong>odstrániť</strong>. Pri viacerých plochách použite <strong>Ctrl + klik</strong>; opakovaný Ctrl-klik vybranú plochu odoberie.</li>
+<li>Vyberte <strong>Direction → Inside</strong> alebo <strong>Outside</strong>.</li>
+<li>Zadajte kladnú <strong>Thickness</strong> a skontrolujte náhľad.</li>
+<li>Potvrďte <strong>OK</strong>. <strong>Cancel/Esc</strong> pred potvrdením zachová pôvodné plné teleso.</li>
+</ol>
+<p><strong>Inside</strong> vytvára steny smerom dovnútra; <strong>Outside</strong> zvonka, čo môže zmeniť vonkajšie rozmery. <strong>Faces to remove</strong> nie je zoznam stien, ktoré chcete ponechať.</p>
+<p>Hotová operácia má <strong>Undo/Redo</strong>, prenosný predpis <code>.pcad</code> a podporovanú editáciu hrúbky v histórii. Platí <a href="#pravidla">automatický cieľ posledného Body</a>. Výber aspoň jednej odstraňovanej plochy je potrebný; panel nie je všeobecný príkaz na uzavretú vnútornú dutinu bez odstránenej steny. Hrúbka sa musí zmestiť do geometrie. Úzke prechody, malé vnútorné polomery a samoprieseky offsetu sa môžu odmietnuť.</p>
+<p><a name="draft"></a></p>
+<h2 id="draft--úkos-stien">Draft — úkos stien<a class="heading-link" href="#draft--úkos-stien" aria-label="Odkaz na sekciu Draft — úkos stien">#</a></h2>
+<p><strong>Účel:</strong> nakloniť vybrané steny voči smeru vyťahovania a neutrálnej rovine, napríklad pri jednoduchom odformovaní.</p>
+<ol>
+<li>Zvoľte <strong>MODIFY → Draft</strong>.</li>
+<li>Kliknite na jednu alebo viac vhodných bočných plôch; <strong>Ctrl + klik</strong> pridáva/odoberá.</li>
+<li>V <strong>Pull Direction</strong> zvoľte X, Y alebo Z.</li>
+<li>Nastavte <strong>Neutral Plane Offset</strong>, <strong>Angle</strong> a podľa potreby <strong>Reverse</strong>.</li>
+<li>Skontrolujte náhľad a potvrďte <strong>OK</strong>. <strong>Cancel/Esc</strong> neaplikovanú úpravu zruší.</li>
+</ol>
+<p>Pre bežné zadanie používajte kladnú veľkosť uhla <strong>väčšiu než 0° a najviac 45°</strong> a smer meňte cez <strong>Reverse</strong>. Kontroluje sa absolútna veľkosť uhla. Osi a offset sa vzťahujú k výpočtovému rámcu telesa; samotné natočenie kamery ich nemení. <strong>Reverse</strong> nenahrádza voľbu správnej neutrálnej roviny.</p>
+<p>Operácia sa ukladá do <code>.pcad</code>, podporuje <strong>Undo/Redo</strong> a <strong>Edit Feature</strong> pre podporovaný uhol/rozmery. Platí výber posledného telesa. Draft nie je úplný nástroj s ľubovoľnou parting line a automatickou analýzou odformovateľnosti. Pri chybnej geometrii alebo nevhodnej hrúbke znížte uhol alebo zmeňte výber; chyba nie je dôvod potvrdiť neplatné teleso.</p>
+<p><a name="offset-face"></a></p>
+<h2 id="press-pull--offset-face--q">Press Pull / Offset Face — Q<a class="heading-link" href="#press-pull--offset-face--q" aria-label="Odkaz na sekciu Press Pull / Offset Face — Q">#</a></h2>
+<p><strong>UI:</strong> <strong>MODIFY → Press Pull</strong>, rozšírený panel <strong>PRESS PULL / OFFSET FACE</strong>, skratka <strong>Q</strong>. Dostupný je aj kontextový príkaz <strong>Press Pull / Offset Face</strong> pri vybranej ploche.</p>
+<p><strong>Účel:</strong> priamo upraviť podporovanú stenu bez otvorenia pôvodnej skice. Vhodné aj na podporovaný importovaný STEP.</p>
+<h3 id="postup">Postup<a class="heading-link" href="#postup" aria-label="Odkaz na sekciu Postup">#</a></h3>
+<ol>
+<li>Spustite <strong>Q</strong> alebo príkaz v Modify.</li>
+<li>Vyberte rovinnú plochu alebo podporovanú celú valcovú stenu. <strong>Shift + klik</strong> pridáva plochy <strong>toho istého telesa</strong>; opakovaný výber plochu odoberie.</li>
+<li>Do <strong>Distance</strong> zadajte nenulovú hodnotu alebo pomenovaný výraz.</li>
+<li>Skontrolujte náhľad a potvrďte <strong>OK/Enter</strong>. <strong>Cancel/Esc</strong> zahodí rozpracovanú úpravu.</li>
+</ol>
+<p><a class="image-link" href="assets/17-offset-face.png" data-image-open aria-label="Zväčšiť obrázok: Vypočítaný náhľad Offset Face"><img src="assets/17-offset-face.png" alt="Vypočítaný náhľad Offset Face" loading="lazy" decoding="async" width="1424" height="861"><span class="image-caption">Zväčšiť obrázok <span aria-hidden="true">↗</span></span></a></p>
+<p><em>Vybratá horná stena a náhľad prídavku 3 mm pred potvrdením OK.</em></p>
+<p><strong>Kladná vzdialenosť pridáva materiál</strong>, záporná odoberá. Pri valcovej stene otvoru preto posudzujte pridanie/odobratie materiálu, nie len pohyb „nahor“ na obrazovke. Normály a typ steny určujú výsledok.</p>
+<h3 id="podpora-a-obmedzenia">Podpora a obmedzenia<a class="heading-link" href="#podpora-a-obmedzenia" aria-label="Odkaz na sekciu Podpora a obmedzenia">#</a></h3>
+<ul>
+<li>Rovinné koncové aj bočné steny.</li>
+<li>Úplné uzavreté valcové steny s rovinnými koncami, vrátane podporovaných dier.</li>
+<li>Viac plôch jedného telesa, náhľad, číselné výrazy, <strong>Edit Feature</strong>, <strong>Undo/Redo</strong> a uloženie do <code>.pcad</code>.</li>
+<li>Výsledok musí byť <strong>jeden platný uzavretý objem</strong>.</li>
+</ul>
+<p>Nie je to univerzálny offset každej orezanej alebo voľnej plochy. Valcový výrez otvorený do boku, susedný kužeľ/zaoblenie, orezaný valec alebo zložité krivé prechody môžu byť nepodporované. Ak potrebujete vysunúť celý obrys rovnej plochy ako nový hranol, použite <strong>Extrude Face</strong>. Ak poznáte výrobný zámer pôvodnej operácie, môže byť lepšia jej priamočiara editácia v histórii.</p>
+<p><a name="delete-face"></a></p>
+<h2 id="delete-face--heal--odstránenie-detailu-a-zacelenie">Delete Face / Heal — odstránenie detailu a zacelenie<a class="heading-link" href="#delete-face--heal--odstránenie-detailu-a-zacelenie" aria-label="Odkaz na sekciu Delete Face / Heal — odstránenie detailu a zacelenie">#</a></h2>
+<p><strong>UI:</strong> <strong>MODIFY → Delete Face / Heal</strong>, rovnaký príkaz v kontextovej ponuke plochy. <strong>Delete</strong> pri vybranej ploche môže použiť túto cestu; nezamieňajte ju s odstránením celého Body.</p>
+<p><strong>Účel:</strong> zrušiť podporovaný detail a získať znovu uzavretý objem, napríklad zaceliť dieru v importovanom STEP bez pôvodnej histórie.</p>
+<h3 id="panelový-postup">Panelový postup<a class="heading-link" href="#panelový-postup" aria-label="Odkaz na sekciu Panelový postup">#</a></h3>
+<ol>
+<li>V bežnom <strong>Select</strong> vyberte plochu detailu. Pre viac plôch ich najprv vyberte cez <strong>Ctrl + klik</strong> na <strong>rovnakom telese</strong>.</li>
+<li>Aktivujte <strong>Delete Face / Heal</strong> z Modify alebo z kontextovej ponuky plochy. Panel prevezme podporovaný predvýber.</li>
+<li>Bez predvýberu možno vybrať prvú plochu aj po otvorení panelu. Potrebný výber môžete zrušiť cez <strong>Clear selection</strong>.</li>
+<li>Počkajte na presný náhľad. Panel musí oznámiť platné uzavreté teleso; v náhľade sa má ukazovať budúci opravený výsledok, nie súčasne rušivý starý obrys.</li>
+<li>Potvrďte <strong>Apply</strong>. <strong>Cancel/Esc</strong> pred potvrdením obnoví pôvodné zobrazenie bez geometrickej zmeny.</li>
+</ol>
+<p><a class="image-link" href="assets/18-delete-heal.png" data-image-open aria-label="Zväčšiť obrázok: Náhľad Heal s dvoma vybranými plochami"><img src="assets/18-delete-heal.png" alt="Náhľad Heal s dvoma vybranými plochami" loading="lazy" decoding="async" width="1424" height="861"><span class="image-caption">Zväčšiť obrázok <span aria-hidden="true">↗</span></span></a></p>
+<p><em>Dve plochy vybraté cez Ctrl pred otvorením nástroja. Platný náhľad opravy čaká na Apply.</em></p>
+<p>Možno vybrať <strong>1–64 rôznych plôch</strong> jedného telesa. Podporované sú nezávislé zaceliteľné detaily:</p>
+<ul>
+<li>uzavreté valcové diery,</li>
+<li>jednoduché rovinné stupne, výstupky a vrecká,</li>
+<li>izolované priame Fillet/Chamfer medzi rovinnými stenami s rovinnými koncami.</li>
+</ul>
+<p>Výsledok musí zostať <strong>jedným platným uzavretým telesom</strong>. Nepodporovaná časť viacnásobného výberu odmietne celú operáciu; nevykoná sa potichu len jej ľubovoľná časť. Prepojené siete zaoblení, zakrivené podporné steny, otvorené bočné valcové výrezy a závislé výbery nemajú všeobecné automatické zacelenie.</p>
+<p><strong>Aktuálny limit dopĺňania výberu v paneli:</strong> po zobrazení platného náhľadu nemusí byť možné pridať ďalšiu plochu kliknutím na pôvodný tvar. Pre viacplochovú opravu preto používajte predvýber v Select. Ak už panel ukazuje iba jednu plochu a ďalšia sa nepridáva, zvoľte <strong>Cancel</strong>, vyberte všetky plochy pred otvorením príkazu a skontrolujte ich počet v paneli. Nápoveda o Ctrl/Shift výbere sama túto hranicu náhľadu neodstraňuje.</p>
+<h3 id="delete-na-už-vybranej-ploche">Delete na už vybranej ploche<a class="heading-link" href="#delete-na-už-vybranej-ploche" aria-label="Odkaz na sekciu Delete na už vybranej ploche">#</a></h3>
+<p>Pri jednom vybranom povrchu môže kláves <strong>Delete</strong> skúsiť priamu opravu bez ďalšieho potvrdenia v paneli; pri viacerých sa otvorí panelový výber. Tento okamžitý krok sa vracia cez <strong>Undo</strong>. Pre bezpečne posúdený viacnásobný výber používajte explicitný panel a jeho náhľad.</p>
+<p>Úprava zachová podporované umiestnenie, meno, materiál a vzhľad telesa a uloží sa do <code>.pcad</code> vrátane potrebných importovaných dát. Pôvodný externý STEP po úspešnom prenosnom uložení nie je náhradou uloženého projektu. <strong>Undo/Redo</strong> obnoví celý krok.</p>
+<p><a name="move"></a></p>
+<h2 id="movecopy-move--rotate-a-obyčajné-potiahnutie">Move/Copy, Move / Rotate a obyčajné potiahnutie<a class="heading-link" href="#movecopy-move--rotate-a-obyčajné-potiahnutie" aria-label="Odkaz na sekciu Move/Copy, Move / Rotate a obyčajné potiahnutie">#</a></h2>
+<p><strong>UI:</strong> <strong>MODIFY → Move/Copy</strong>, skratka <strong>M</strong>; panel má nadpis <strong>MOVE / ROTATE</strong>. V kontextovej ponuke je <strong>Move / Rotate</strong> a osobitne <strong>Move / Rename Body</strong>.</p>
+<h3 id="movecopy-s-manipulátorom">Move/Copy s manipulátorom<a class="heading-link" href="#movecopy-s-manipulátorom" aria-label="Odkaz na sekciu Move/Copy s manipulátorom">#</a></h3>
+<ol>
+<li>Vyberte teleso alebo komponent v Browseri; prípadne ho zvoľte po otvorení nástroja.</li>
+<li>Stlačte <strong>M</strong>.</li>
+<li>V <strong>Move objects</strong> zvoľte:<ul>
+<li><strong>Components / loose bodies</strong> — bežné presúvanie celého vlastníka/voľného dielu,</li>
+<li><strong>Bodies within components</strong> — úprava polohy samotných telies vnútri komponentov.</li>
+</ul>
+</li>
+<li>V <strong>Manipulator</strong> vyberte <strong>Translate — XYZ arrows</strong> alebo <strong>Rotate — rings</strong>.</li>
+<li>Potiahnite šípku/kruh alebo zadajte <strong>Translate X/Y/Z</strong> a <strong>Rotate X/Y/Z (deg)</strong>.</li>
+<li>Ak chcete nezávislú kópiu samostatných telies, zapnite <strong>Create Copy</strong>. Pre celý komponent používajte <strong>Copy Component</strong>, nie túto voľbu.</li>
+<li>Potvrďte <strong>OK/Enter</strong>. <strong>Cancel/Esc</strong> pred potvrdením obnoví pôvodnú polohu.</li>
+</ol>
+<p>Manipulátor používa svetové smery a otáča okolo zobrazeného pivotu výberu, typicky jeho stredu, nie automaticky okolo svetového počiatku. Pri zadávaní sa zobrazuje náhľad skutočného umiestnenia. Po potvrdení sa ukladá poloha/natočenie; objem telesa sa samotným presunom nemení. Kópie telies sú nezávislé a preberajú podporované materiálové/vzhľadové nastavenia.</p>
+<p><strong>Ground ani spoje sa pri presune neodstránia.</strong> Viazaný komponent sa môže pohybovať iba podporovaným stupňom voľnosti; pri pohyblivom spoji sa rešpektujú limity. Ľubovoľné voľné premiestnenie spojeného dielu môže vyžadovať vedome potlačiť spoj. Viac komponentov závislých od pohyblivých spojov nemožno jedným voľným ťahom všeobecne riešiť.</p>
+<h3 id="priame-potiahnutie">Priame potiahnutie<a class="heading-link" href="#priame-potiahnutie" aria-label="Odkaz na sekciu Priame potiahnutie">#</a></h3>
+<p>V bežnom <strong>Select</strong> obyčajný klik vyberie plochu. Až prekročenie malej vzdialenosti potiahnutia začne presun voľného komponentu alebo samostatného telesa. <strong>Uvoľnenie tlačidla</strong> tento presun dokončí; nemá dodatočné OK. <strong>Esc počas rozpracovaného presunu</strong> ho zruší, hotový ťah vracia <strong>Undo</strong>. Pri spojenom diele môže ťah ovládať jeho podporovaný kĺb.</p>
+<h3 id="move--rename-body">Move / Rename Body<a class="heading-link" href="#move--rename-body" aria-label="Odkaz na sekciu Move / Rename Body">#</a></h3>
+<p>Pravým kliknutím na teleso → <strong>Move / Rename Body</strong> otvoríte <strong>Name</strong>, absolútnu <strong>Position X/Y/Z</strong> a <strong>Rotation X/Y/Z</strong> daného telesa. Vyplňte platné hodnoty a potvrďte <strong>OK</strong>; <strong>Cancel/Esc</strong> pred potvrdením ich nepoužije. Táto cesta je priama úprava telesa, nie univerzálna náhrada zostavového presunu s väzbami.</p>
+<p>Všetky dokončené podporované presuny majú <strong>Undo/Redo</strong> a ukladajú sa do <code>.pcad</code>. Rozdiel medzi Body a Component opisuje <a href="07-Zostavy-a-pohyb.html">Zostavy a pohyb</a>.</p>
+<p><a name="scale"></a></p>
+<h2 id="scale--jednotná-zmena-mierky-telesa">Scale — jednotná zmena mierky telesa<a class="heading-link" href="#scale--jednotná-zmena-mierky-telesa" aria-label="Odkaz na sekciu Scale — jednotná zmena mierky telesa">#</a></h2>
+<p><strong>UI:</strong> <strong>MODIFY → Scale</strong>; panel <strong>SCALE BODY</strong>.</p>
+<ol>
+<li>Zvoľte <strong>Body</strong> v zozname.</li>
+<li>Do <strong>Uniform scale factor</strong> zadajte kladný faktor: <code>2</code> zdvojnásobí dĺžky, <code>0.5</code> ich zmenší na polovicu.</li>
+<li>Potvrďte <strong>OK</strong>. <strong>Cancel/Esc</strong> pred potvrdením nič neprepočíta.</li>
+</ol>
+<p>Ide o <strong>jednotnú mierku geometrie okolo lokálneho počiatku jej predpisu</strong>, nie len zmenu vzhľadu na obrazovke. Umiestnenie objektu sa zachováva ako umiestnenie, ale geometrický stred sa môže v lokálnom rámci zmeniť. Objem sa pri faktore <code>s</code> násobí <code>s³</code>, ak výsledok zostane platný.</p>
+<p>Nula, záporná alebo neplatná hodnota sa odmietne. Samostatná neuniformná mierka X/Y/Z ani všeobecné pretvorenie nie sú v tomto paneli. Krok má <strong>Undo/Redo</strong> a uložený predpis <code>.pcad</code>; pre neskoršie významové zmeny dielu je často vhodnejšia pôvodná skicová/operatívna kóta.</p>
+<p><a name="patterns"></a></p>
+<h2 id="vzory-telies">Vzory telies<a class="heading-link" href="#vzory-telies" aria-label="Odkaz na sekciu Vzory telies">#</a></h2>
+<p>Tieto nástroje kopírujú <strong>Body</strong>, nie iba jeho posledný otvor alebo zaoblenie a nie ľubovoľný komponent s vnorenými spojmi. Pre vzor viacerých skicových dier použite príslušné skicové pole; pre zostavové kópie <strong>Copy Component</strong>. Kópie telies nie sú všeobecne plne asociatívny vzor budúcich zmien pôvodného návrhu.</p>
+<h3 id="rectangular-pattern">Rectangular Pattern<a class="heading-link" href="#rectangular-pattern" aria-label="Odkaz na sekciu Rectangular Pattern">#</a></h3>
+<p><strong>UI:</strong> <strong>CREATE → Rectangular Pattern</strong>.</p>
+<ol>
+<li>Spustite nástroj a kliknite na zdrojové teleso.</li>
+<li>Vyberte <strong>Direction → X Axis / Y Axis / Z Axis</strong>.</li>
+<li>Zadajte <strong>Quantity</strong> a <strong>Distance</strong>.</li>
+<li>Skontrolujte náhľad a potvrďte <strong>OK</strong>; <strong>Cancel/Esc</strong> ho zruší.</li>
+</ol>
+<p><strong>Quantity 2–50 zahŕňa originál. Distance je rozostup susedných výskytov</strong>, nie celková dĺžka radu; môže byť záporný, nesmie byť nulový. Panel vytvára <strong>jeden rad po jednej osi</strong>. Všeobecné dve/trí nezávislé smerové polia ani výber ľubovoľnej hrany ako smeru tu nie sú.</p>
+<p>Kopírovanie prebieha v podporovanom výpočtovom rámci predpisu. Pri telese neskôr voľne premiestnenom v zostave zvlášť overte skutočnú polohu výsledných kópií; tento nástroj nenahrádza plné zostavové pole. Dokončený výsledok má <strong>Undo/Redo</strong> a ukladá sa do <code>.pcad</code>.</p>
+<h3 id="circular-pattern">Circular Pattern<a class="heading-link" href="#circular-pattern" aria-label="Odkaz na sekciu Circular Pattern">#</a></h3>
+<p><strong>UI:</strong> <strong>CREATE → Circular Pattern</strong>.</p>
+<ol>
+<li>Vyberte zdrojové teleso.</li>
+<li>Nastavte <strong>Axis → X/Y/Z</strong>, <strong>Quantity 2–50</strong> a <strong>Total Angle</strong> väčší než 0°, najviac 360°.</li>
+<li>Skontrolujte náhľad a potvrďte <strong>OK</strong>; <strong>Cancel/Esc</strong> pred potvrdením nič nepridá.</li>
+</ol>
+<p>Počet zahŕňa originál. Pri úplných 360° sa prvý výskyt na konci neduplikuje; pri čiastočnom uhle sa rozmiestnenie rozkladá cez zadaný rozsah. Os je podporovaná súradnicová os, nie ľubovoľná kruhová hrana s voľne vybraným stredom. Overte výpočtový rámec a polohu kópií, najmä v premiestnenej zostave. Krok má <strong>Undo/Redo</strong> a uloženie <code>.pcad</code>.</p>
+<p><a name="mirror"></a></p>
+<h2 id="mirror--zrkadlenie-telesa">Mirror — zrkadlenie telesa<a class="heading-link" href="#mirror--zrkadlenie-telesa" aria-label="Odkaz na sekciu Mirror — zrkadlenie telesa">#</a></h2>
+<p><strong>UI:</strong> <strong>CREATE → Mirror</strong>.</p>
+<ol>
+<li>Spustite nástroj a kliknite na zdrojové teleso.</li>
+<li>V <strong>Mirror Plane</strong> vyberte <strong>YZ Plane</strong>, <strong>XZ Plane</strong> alebo <strong>XY Plane</strong>.</li>
+<li>Zadajte <strong>Plane Offset</strong> v milimetroch.</li>
+<li>Ponechajte <strong>Keep Original</strong>, ak chcete originál aj zrkadlovú kópiu. Vypnutie nahradí originál.</li>
+<li>Skontrolujte náhľad a potvrďte <strong>OK</strong>; <strong>Cancel/Esc</strong> nič nezrkadlí.</li>
+</ol>
+<p>Rovina je súradnicová rovina podporovaného predpisu s číselným offsetom, nie univerzálny výber ľubovoľnej steny ako zrkadla. Pri viacrámcovej/premiestnenej zostave overte skutočný výsledok; na prenos celej hierarchie tento Body nástroj neslúži. Vzniknutý predpis sa ukladá a krok podporuje <strong>Undo/Redo</strong>.</p>
+<p><a name="split"></a></p>
+<h2 id="split-body--rozdelenie-telesa-rovinou">Split Body — rozdelenie telesa rovinou<a class="heading-link" href="#split-body--rozdelenie-telesa-rovinou" aria-label="Odkaz na sekciu Split Body — rozdelenie telesa rovinou">#</a></h2>
+<p><strong>UI:</strong> <strong>MODIFY → Split Body</strong>.</p>
+<ol>
+<li>V <strong>Body</strong> zvoľte cieľ.</li>
+<li>V <strong>Plane (body coordinates)</strong> vyberte <strong>XY</strong>, <strong>XZ</strong> alebo <strong>YZ</strong>.</li>
+<li>Nastavte <strong>Plane offset (mm)</strong> tak, aby rovina skutočne pretínala objem.</li>
+<li>Potvrďte <strong>OK</strong>. <strong>Cancel/Esc</strong> pred potvrdením nič nerozdelí.</li>
+</ol>
+<p>Po úspechu vzniknú dve časti: prvá zachová identitu pôvodného Body, druhá je nové Body s označením split. Podporované umiestnenie a vlastnosti sa prenesú. <strong>Undo</strong> obnoví jeden pôvodný objem; <strong>Redo</strong> rozdelenie. Oba predpisy sa ukladajú do <code>.pcad</code>.</p>
+<p>Panel nevyberá ľubovoľný nástrojový povrch, splinu ani zložitý rezací diel. Používa <strong>rovinu v súradniciach telesa</strong>; svetové natočenie kamery nemení význam XY/XZ/YZ. Ak jedna polovica nemá objem, zmeňte offset. Nejde o automatickú tvorbu montážnych spojov alebo tolerancií medzi polovicami.</p>
+<p><a name="combine"></a></p>
+<h2 id="combine--booleovské-operácie">Combine — booleovské operácie<a class="heading-link" href="#combine--booleovské-operácie" aria-label="Odkaz na sekciu Combine — booleovské operácie">#</a></h2>
+<p><strong>UI:</strong> <strong>MODIFY → Combine</strong>.</p>
+<p><strong>Účel:</strong> vykonať operáciu medzi dvoma objemami.</p>
+<ol>
+<li>Spustite <strong>Combine</strong>.</li>
+<li>Kliknite na <strong>Target Body</strong> — teleso, ktoré sa má upraviť.</li>
+<li>Kliknite na iné <strong>Tool Body</strong> — nástrojový objem.</li>
+<li>Vyberte <strong>Operation</strong> a podľa potreby <strong>Keep Tools</strong>.</li>
+<li>Skontrolujte náhľad a potvrďte <strong>OK</strong>; <strong>Cancel/Esc</strong> zachová pôvodné dva objekty.</li>
+</ol>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabuľka"><table><thead><tr><th>Operation</th><th>Výsledok</th></tr></thead><tbody><tr><td><strong>Join</strong></td><td>Zjednotenie objemov.</td></tr><tr><td><strong>Cut</strong></td><td>Cieľ mínus nástroj.</td></tr><tr><td><strong>Intersect</strong></td><td>Iba spoločný objem.</td></tr></tbody></table></div><p>Bez <strong>Keep Tools</strong> sa nástrojové teleso po úspechu spotrebuje. S touto voľbou zostane samostatne zachované. Cieľ a nástroj nemôžu byť to isté Body. Pre Cut/Intersect musí mať ich vzájomná poloha zmysel; rozdelený alebo prázdny výsledok môže ďalšia operácia odmietnuť.</p>
+<p>Príkaz pracuje s výpočtovými predpismi oboch telies. Nezamieňajte zobrazený pohyb komponentu s automatickým zosúladením ľubovoľných odlišných rámcov receptov: pri zložitej natočenej zostave overte náhľad a výsledný objem. Všeobecnú booleovskú úpravu každého premiestneného komponentu tento panel nesľubuje.</p>
+<p>Dokončený Combine má <strong>Undo/Redo</strong>, uložený predpis <code>.pcad</code> a spotrebovanie nástroja sa vracia spolu s celým krokom. Pri chybe skontrolujte cieľ, nástroj a ich umiestnenie pred ďalším výpočtom.</p>
+<h3 id="join-all-bodies">Join All Bodies<a class="heading-link" href="#join-all-bodies" aria-label="Odkaz na sekciu Join All Bodies">#</a></h3>
+<p>V páse/ponuke je krátky názov <strong>Join All Bodies</strong>; nápoveda ho opisuje ako <strong>Combine All Bodies</strong>.</p>
+<ol>
+<li>Skontrolujte celý zoznam Bodies. Tento príkaz nepracuje len s poslednou dvojicou vybraných telies.</li>
+<li>Aktivujte <strong>Join All Bodies</strong>. Výpočet sa spustí <strong>hneď</strong>, bez ďalšieho OK a bez bežného Cancel náhľadu.</li>
+<li>Skontrolujte výsledok v Browseri. <strong>Undo</strong> vráti pôvodné telesá.</li>
+</ol>
+<p>Vyžaduje aspoň dve telesá v <strong>rovnakom podporovanom súradnicovom rámci</strong>. Nespojené objemy môžu v zjednotenom predpise zostať oddelenými objemovými oblasťami; jeden riadok Body nie je dôkaz, že vznikol jeden fyzicky spojený vytlačiteľný kus. Výsledok sa ukladá do <code>.pcad</code>.</p>
+<p><a name="thread"></a></p>
+<h2 id="thread--tlačiteľný-závit">Thread — tlačiteľný závit<a class="heading-link" href="#thread--tlačiteľný-závit" aria-label="Odkaz na sekciu Thread — tlačiteľný závit">#</a></h2>
+<p><strong>UI:</strong> <strong>CREATE → Thread</strong>, panel <strong>THREAD · 3D PRINT</strong>.</p>
+<p><strong>Účel:</strong> vytvoriť skutočnú závitovú geometriu s 60° profilom, voliteľný protikus a skrutkový pohyb. Nie je to iba vizuálna šrafúra závitu.</p>
+<h3 id="postup-1">Postup<a class="heading-link" href="#postup-1" aria-label="Odkaz na sekciu Postup">#</a></h3>
+<ol>
+<li>Pripravte vhodné samostatné telesá. Pre vonkajší závit použite <strong>jednoduché plno-dĺžkové kruhové Extrude s lokálnou osou Z</strong>.</li>
+<li>Otvorte <strong>Thread</strong> a v <strong>Body</strong> vyberte upravovaný objem.</li>
+<li>Zvoľte <strong>Type → External</strong> alebo <strong>Internal</strong>. Pri tvorbe páru vyberte vonkajšie teleso a druhé <strong>Mating body</strong>.</li>
+<li>Nastavte <strong>Major diameter (mm)</strong>, <strong>Pitch (mm/revolution)</strong>, <strong>Length (mm)</strong> a <strong>Radial clearance (mm)</strong>.</li>
+<li>Podľa potreby zapnite <strong>Left-hand thread</strong>. V <strong>Thread origins · body local Z axes</strong> skontrolujte lokálne <strong>Body/Mate origin X/Y/Z</strong>.</li>
+<li>Voliteľne zapnite <strong>Align mating component and add screw joint</strong>. Vyžaduje dva vhodné rôzne komponenty alebo voľné telá, z ktorých ich nástroj môže vytvoriť.</li>
+<li><strong>Preview</strong> vypočíta náhľad. Až <strong>OK</strong> aplikuje výsledok, pri páre spoločne na obe telá. <strong>Cancel/Esc</strong> rozpracovaný výpočet/náhľad zruší; už aplikovaný závit vracia <strong>Undo</strong>.</li>
+</ol>
+<h3 id="konkrétne-hranice">Konkrétne hranice<a class="heading-link" href="#konkrétne-hranice" aria-label="Odkaz na sekciu Konkrétne hranice">#</a></h3>
+<ul>
+<li>Vonkajší priemer je <strong>väčší než 0 a najviac 50 mm</strong>; dĺžka a stúpanie sú kladné a závit má <strong>najviac 20 otáčok</strong>.</li>
+<li>Profil potrebuje dostatočný polomer voči hĺbke zuba; neplatná kombinácia priemeru/stúpania sa odmietne.</li>
+<li>Vonkajší variant nie je všeobecný nástroj na ľubovoľnú čiastočnú valcovú stenu po každej úprave.</li>
+<li>Vnútorný závit potrebuje vhodné plné teleso alebo otvor menší než koreňový priemer. Kontroluje sa skutočný zásah a jeden súvislý objem v každom upravenom telese.</li>
+<li><strong>Radial clearance</strong> zväčšuje samičí profil radiálne. Nula je presná geometrická zhoda, nie odporúčaná vôľa každej tlačiarne. Kladnú vôľu overte skúšobným vytlačeným párom.</li>
+<li>Skrutkový spoj má stúpanie a smer závitu; spoj nemôže bez kontroly prebrať už inak poháňaný alebo uzemnený protikus.</li>
+</ul>
+<p>Recept závitu a prípadný spoj sa ukladajú do <code>.pcad</code>; <strong>Undo/Redo</strong> sa týka celého potvrdenia. Nie je tým implementovaný normovaný, kalibrovaný ISO katalóg ani záruka pevnosti, rozmerovej tolerancie alebo vyrobiteľnosti. Hole nemá automatický „tapped hole“ katalóg iba preto, že existuje tento Thread.</p>
+<p><a name="gear"></a></p>
+<h2 id="edit-gear--rack--existujúce-parametrické-ozubenie">Edit Gear / Rack — existujúce parametrické ozubenie<a class="heading-link" href="#edit-gear--rack--existujúce-parametrické-ozubenie" aria-label="Odkaz na sekciu Edit Gear / Rack — existujúce parametrické ozubenie">#</a></h2>
+<p><strong>Účel:</strong> upraviť podporovaný už parametrický pastorok alebo hrebeň používaný v príslušnom návrhu. Nejde o všeobecný importér rozpoznávajúci ozubenie z ľubovoľného STEP.</p>
+<ol>
+<li>Na podporovanom Body použite pravé kliknutie → <strong>Edit Gear / Rack</strong>, prípadne otvorenie jeho príslušnej operácie.</li>
+<li>V <strong>EDIT GEAR / RACK</strong> upravte dostupné polia: <strong>Module (mm)</strong>, <strong>Teeth</strong>, <strong>Rack length (mm)</strong>, <strong>Width (mm)</strong>, <strong>Pressure angle (deg)</strong>, <strong>Backlash (mm)</strong> a pri pastorku <strong>Through bore (mm)</strong>.</li>
+<li>Potvrďte <strong>OK</strong>. <strong>Cancel/Esc pred potvrdením</strong> nezmení predpis; počas prebiehajúceho potvrdenia počkajte na výsledok alebo chybu.</li>
+</ol>
+<p>Podpora je ohraničená na konkrétny generovaný typ a jeho zachované montážne prvky. Základné kontrolované rozsahy sú modul <strong>0,5–8 mm</strong>, šírka <strong>2–100 mm</strong>, tlakový uhol <strong>14–30°</strong>, vôľa <strong>0 až 0,4 násobku modulu</strong>; pastorok má <strong>12–120 celočíselných zubov</strong>, hrebeň dĺžku <strong>30–500 mm</strong>. Príliš veľký vrt alebo neplatná geometria zuba sa odmietne.</p>
+<p>Úprava zachová podporovanú polohu, materiál a následné predpisy, má <strong>Undo/Redo</strong> a ukladá sa do <code>.pcad</code>. Nepreráta automaticky celú zostavu, osové vzdialenosti a všetky montážne diely po zmene modulu alebo počtu zubov. Prítomnosť tohto kontextového editora neznamená samostatný úplný katalóg všetkých ozubených prevodov.</p>
+<p><a name="delete-body"></a></p>
+<h2 id="delete-body--odstránenie-celého-telesa">Delete Body — odstránenie celého telesa<a class="heading-link" href="#delete-body--odstránenie-celého-telesa" aria-label="Odkaz na sekciu Delete Body — odstránenie celého telesa">#</a></h2>
+<p>V Browseri vyberte jedno alebo viac <strong>Bodies</strong> a použite kontextové <strong>Delete Body</strong>, prípadne Delete pre skutočný telesový výber. <strong>Ctrl/Shift</strong> v strome pomáha s viacnásobným výberom.</p>
+<p>Odstránenie je okamžité; <strong>Undo</strong> obnoví telá a súvisiace uložené dáta. <strong>Esc po Delete</strong> ich nevráti. Pri vybranej <strong>ploche</strong> môže rovnaký kláves znamenať <strong>Delete Face / Heal</strong>; pred stlačením preto skontrolujte úroveň výberu. Odstránenie <strong>Component</strong> je iný zostavový príkaz a môže zahŕňať jeho obsah a spoje.</p>
+<p>Odstránenie zdroja môže prerušiť projektované referencie v skiciach. Pred uložením výsledku skontrolujte upozornenia a závislosti. Uloženie potvrdí aktuálny stav bez odstránených telies; nie je to presun dokumentu do koša projektov.</p>
+<p><a name="chyby"></a></p>
+<h2 id="editácia-uloženie-a-riešenie-chýb">Editácia, uloženie a riešenie chýb<a class="heading-link" href="#editácia-uloženie-a-riešenie-chýb" aria-label="Odkaz na sekciu Editácia, uloženie a riešenie chýb">#</a></h2>
+<p>Podporované <strong>Edit Feature</strong> a <strong>Suppress/Unsuppress</strong> sa viažu na konkrétny krok a jeho identitu, nie iba na náhodne zhodný rozmer. Podrobnosti sú v <a href="03-Browser-a-historia.html">Browser a história</a>. Nejde o všeobecné preusporiadanie ľubovoľného parametrického grafu.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Tabuľka"><table><thead><tr><th>Problém</th><th>Praktický postup</th></tr></thead><tbody><tr><td>Zaoblenie alebo Shell ponúka iné telo.</td><td>Skontrolujte obmedzenie nového výberu posledného Body a skutočne ponúkané hrany/plochy.</td></tr><tr><td>Fillet/Shell/Draft sa nedá vypočítať.</td><td>Menší rozmer, jednoduchší výber, kontrola hrúbky a susedných detailov.</td></tr><tr><td>Press Pull alebo Heal odmieta zakrivenú stenu.</td><td>Overte podporovaný typ; univerzálna oprava voľných plôch nie je implementovaná.</td></tr><tr><td>Combine nič zmysluplné neodoberá.</td><td>Cieľ, nástroj, vzájomná poloha/podporovaný rámec a skutočný prienik.</td></tr><tr><td>Chýba originál po Mirror/Combine.</td><td>Overte <strong>Keep Original/Keep Tools</strong>; celý krok možno vrátiť cez Undo.</td></tr><tr><td>Vzor vytvoril menej kópií, než ste čakali.</td><td>Quantity zahŕňa originál. Úplné 360° neduplikuje začiatok.</td></tr><tr><td>Presun spojeného dielu je blokovaný.</td><td>Ground, geometrické väzby, pohyblivý spoj a jeho limity; použite správny zostavový postup.</td></tr><tr><td>Po zmene pôvodného rozmeru zlyhá neskoršia hrana.</td><td>Môže zaniknúť alebo sa stať nejednoznačnou. Upravte konkrétny následný výber; stabilné pomenovanie topológie po každej zásadnej zmene nie je hotové.</td></tr></tbody></table></div><p>Pri prenose na iný počítač uchovajte <code>.pcad</code>, nie iba snímku alebo exportnú sieť. <a href="09-Import-export-a-subory.html">Import, export a súbory</a> vysvetľujú vloženie potrebných zdrojov, rozdiel STEP/STL/3MF a veľkostné limity. <a href="08-Vzhlad-a-vlastnosti.html">Vzhľad a vlastnosti</a> odlišujú farbu, skutočný objem, hustotu a hrubý odhad tlače.</p>
+<p>Plošné/T-spline modelovanie, všeobecné siete zaoblení, úplný Sheet Metal, Rib/Coil/Emboss, CAM a pevnostná simulácia zostávajú mimo hotového rozsahu týchto príkazov. Overený numerický výsledok nie je fyzická skúška dielu.</p>
+</article><nav class="pagination" aria-label="Susedné kapitoly"><a href="05-3D-modelovanie.html"><span>Predchádzajúca kapitola</span><strong>← 3D modelovanie</strong></a><a class="next" href="07-Zostavy-a-pohyb.html"><span>Ďalšia kapitola</span><strong>Zostavy a pohyb →</strong></a></nav><footer class="article-footer"><span>PersonalCAD 0.2.5 · Používateľský manuál</span><a href="#main">Na začiatok ↑</a></footer></main><aside class="page-toc"><nav aria-label="Na tejto stránke"><h2>Na tejto stránke</h2><ol><li><a href="#obsah">Obsah</a></li><li><a href="#spoločné-pravidlá-a-výber-cieľa">Spoločné pravidlá a výber cieľa</a></li><li><a href="#fillet-a-chamfer--hrany-objemu">Fillet a Chamfer — hrany objemu</a></li><li><a href="#shell--duté-teleso">Shell — duté teleso</a></li><li><a href="#draft--úkos-stien">Draft — úkos stien</a></li><li><a href="#press-pull--offset-face--q">Press Pull / Offset Face — Q</a></li><li><a href="#delete-face--heal--odstránenie-detailu-a-zacelenie">Delete Face / Heal — odstránenie detailu a zacelenie</a></li><li><a href="#movecopy-move--rotate-a-obyčajné-potiahnutie">Move/Copy, Move / Rotate a obyčajné potiahnutie</a></li><li><a href="#scale--jednotná-zmena-mierky-telesa">Scale — jednotná zmena mierky telesa</a></li><li><a href="#vzory-telies">Vzory telies</a></li><li><a href="#mirror--zrkadlenie-telesa">Mirror — zrkadlenie telesa</a></li><li><a href="#split-body--rozdelenie-telesa-rovinou">Split Body — rozdelenie telesa rovinou</a></li><li><a href="#combine--booleovské-operácie">Combine — booleovské operácie</a></li><li><a href="#thread--tlačiteľný-závit">Thread — tlačiteľný závit</a></li><li><a href="#edit-gear--rack--existujúce-parametrické-ozubenie">Edit Gear / Rack — existujúce parametrické ozubenie</a></li><li><a href="#delete-body--odstránenie-celého-telesa">Delete Body — odstránenie celého telesa</a></li><li><a href="#editácia-uloženie-a-riešenie-chýb">Editácia, uloženie a riešenie chýb</a></li></ol></nav></aside></div>
+<dialog id="searchDialog" class="search-dialog" aria-label="Hľadať v príručke"><form method="dialog" class="search-heading"><label for="searchInput"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"/><path d="m15.5 15.5 4 4"/></svg></label><input id="searchInput" type="search" placeholder="Funkcia, skratka alebo problém…" autocomplete="off" aria-label="Hľadať v príručke" aria-controls="searchResults"><button class="icon-button" aria-label="Zavrieť vyhľadávanie"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></form><p class="search-status" id="searchStatus" aria-live="polite">Začni písať. Hľadanie funguje aj bez diakritiky.</p><div id="searchResults" class="search-results"></div><div class="search-footer"><span><kbd>↑</kbd><kbd>↓</kbd> výber <kbd>Enter</kbd> otvoriť</span><span><kbd>Esc</kbd> zavrieť</span></div></dialog>
+<dialog id="imageDialog" class="image-dialog" aria-label="Zväčšený obrázok"><form method="dialog"><button class="icon-button" aria-label="Zavrieť obrázok"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></form><img id="imagePreview" alt=""><p id="imageDescription"></p></dialog></body></html>

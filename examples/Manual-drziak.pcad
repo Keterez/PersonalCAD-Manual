@@ -1,0 +1,446 @@
+{
+  "formatVersion": 2,
+  "units": "mm",
+  "sketches": [
+    {
+      "name": "Sketch1",
+      "plane": "XY",
+      "supportPlaneId": null,
+      "entities": [
+        {
+          "type": "rectangle",
+          "id": "31293327-8ff9-472b-9e0a-c6b4b53e2a1d",
+          "construction": false,
+          "constraint": "Horizontal/Vertical",
+          "widthDimension": 40,
+          "heightDimension": 30,
+          "dimensionPositions": {
+            "width": [
+              0,
+              -24.000001616224452,
+              0
+            ],
+            "height": [
+              28.999999072612315,
+              0,
+              0
+            ]
+          },
+          "points": [
+            [
+              -20,
+              -15,
+              0
+            ],
+            [
+              20,
+              -15,
+              0
+            ],
+            [
+              20,
+              15,
+              0
+            ],
+            [
+              -20,
+              15,
+              0
+            ]
+          ]
+        }
+      ],
+      "constraints": [],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "quaternion": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "angularDimensions": [],
+      "componentId": "root",
+      "dimensionExpressions": [
+        {
+          "entityId": "31293327-8ff9-472b-9e0a-c6b4b53e2a1d",
+          "axis": "width",
+          "kind": "width",
+          "expression": "40",
+          "unit": "mm"
+        },
+        {
+          "entityId": "31293327-8ff9-472b-9e0a-c6b4b53e2a1d",
+          "axis": "height",
+          "kind": "height",
+          "expression": "30",
+          "unit": "mm"
+        }
+      ]
+    }
+  ],
+  "constructionPlanes": [],
+  "features": [
+    {
+      "type": "Extrude",
+      "bodyId": "5c86eaaf-bd9b-4389-9e6b-f11ef017af1c",
+      "profileId": "31293327-8ff9-472b-9e0a-c6b4b53e2a1d",
+      "distance": 8,
+      "direction": "one",
+      "flipped": false,
+      "operation": "newBody",
+      "id": "37e49a43-eeef-4eb9-88b8-3a2a2904e5d6",
+      "recipeId": "37e49a43-eeef-4eb9-88b8-3a2a2904e5d6",
+      "definition": {
+        "profile": {
+          "type": "polygon",
+          "points": [
+            [
+              -20,
+              -15
+            ],
+            [
+              20,
+              -15
+            ],
+            [
+              20,
+              15
+            ],
+            [
+              -20,
+              15
+            ]
+          ]
+        },
+        "depth": 8,
+        "unifyCircularFaces": true,
+        "sourceProfileId": "31293327-8ff9-472b-9e0a-c6b4b53e2a1d",
+        "sourceOffset": 0,
+        "sourceDirection": "one",
+        "sourceFlipped": false,
+        "parameterExpressions": {
+          "depth": {
+            "expression": "thickness",
+            "unit": "mm",
+            "scale": 1,
+            "positive": true
+          }
+        },
+        "featureId": "37e49a43-eeef-4eb9-88b8-3a2a2904e5d6"
+      },
+      "suppressed": false
+    },
+    {
+      "type": "Hole",
+      "bodyId": "5c86eaaf-bd9b-4389-9e6b-f11ef017af1c",
+      "diameter": 5,
+      "depth": 10,
+      "center": [
+        0.0000017,
+        -0.0000021,
+        8
+      ],
+      "holeType": "simple",
+      "extent": "throughAll",
+      "operation": "cut",
+      "id": "e4ecc702-7ef1-4347-bb89-826dbbb0ffca",
+      "recipeId": "e4ecc702-7ef1-4347-bb89-826dbbb0ffca",
+      "definition": {
+        "kind": "hole",
+        "target": {
+          "profile": {
+            "type": "polygon",
+            "points": [
+              [
+                -20,
+                -15
+              ],
+              [
+                20,
+                -15
+              ],
+              [
+                20,
+                15
+              ],
+              [
+                -20,
+                15
+              ]
+            ]
+          },
+          "depth": 8,
+          "unifyCircularFaces": true,
+          "sourceProfileId": "31293327-8ff9-472b-9e0a-c6b4b53e2a1d",
+          "sourceOffset": 0,
+          "sourceDirection": "one",
+          "sourceFlipped": false,
+          "parameterExpressions": {
+            "depth": {
+              "expression": "thickness",
+              "unit": "mm",
+              "scale": 1,
+              "positive": true
+            }
+          },
+          "featureId": "37e49a43-eeef-4eb9-88b8-3a2a2904e5d6"
+        },
+        "face": 5,
+        "selector": {
+          "version": 1,
+          "kind": "face",
+          "type": "PLANE",
+          "bounds": [
+            [
+              -20,
+              -15,
+              8
+            ],
+            [
+              20,
+              15,
+              8
+            ]
+          ],
+          "normalized": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "bodyBounds": [
+            [
+              -20,
+              -15,
+              0
+            ],
+            [
+              20,
+              15,
+              8
+            ]
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "origin": [
+            4.440892098500626e-16,
+            -8.881784197001253e-17,
+            8
+          ]
+        },
+        "diameter": 5,
+        "depth": 10,
+        "center": [
+          0.0000017,
+          -0.0000021,
+          8
+        ],
+        "holeType": "simple",
+        "extent": "throughAll",
+        "parameterExpressions": {
+          "diameter": {
+            "expression": "holeDiameter",
+            "unit": "mm",
+            "scale": 1,
+            "positive": true
+          }
+        },
+        "featureId": "e4ecc702-7ef1-4347-bb89-826dbbb0ffca"
+      },
+      "suppressed": false
+    }
+  ],
+  "bodies": [
+    {
+      "id": "5c86eaaf-bd9b-4389-9e6b-f11ef017af1c",
+      "name": "Body1",
+      "volume": 9442.92036732051,
+      "definition": {
+        "kind": "hole",
+        "target": {
+          "profile": {
+            "type": "polygon",
+            "points": [
+              [
+                -20,
+                -15
+              ],
+              [
+                20,
+                -15
+              ],
+              [
+                20,
+                15
+              ],
+              [
+                -20,
+                15
+              ]
+            ]
+          },
+          "depth": 8,
+          "unifyCircularFaces": true,
+          "sourceProfileId": "31293327-8ff9-472b-9e0a-c6b4b53e2a1d",
+          "sourceOffset": 0,
+          "sourceDirection": "one",
+          "sourceFlipped": false,
+          "parameterExpressions": {
+            "depth": {
+              "expression": "thickness",
+              "unit": "mm",
+              "scale": 1,
+              "positive": true
+            }
+          },
+          "featureId": "37e49a43-eeef-4eb9-88b8-3a2a2904e5d6"
+        },
+        "face": 5,
+        "selector": {
+          "version": 1,
+          "kind": "face",
+          "type": "PLANE",
+          "bounds": [
+            [
+              -20,
+              -15,
+              8
+            ],
+            [
+              20,
+              15,
+              8
+            ]
+          ],
+          "normalized": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ],
+          "bodyBounds": [
+            [
+              -20,
+              -15,
+              0
+            ],
+            [
+              20,
+              15,
+              8
+            ]
+          ],
+          "normal": [
+            0,
+            0,
+            1
+          ],
+          "origin": [
+            4.440892098500626e-16,
+            -8.881784197001253e-17,
+            8
+          ]
+        },
+        "diameter": 5,
+        "depth": 10,
+        "center": [
+          0.0000017,
+          -0.0000021,
+          8
+        ],
+        "holeType": "simple",
+        "extent": "throughAll",
+        "parameterExpressions": {
+          "diameter": {
+            "expression": "holeDiameter",
+            "unit": "mm",
+            "scale": 1,
+            "positive": true
+          }
+        },
+        "featureId": "e4ecc702-7ef1-4347-bb89-826dbbb0ffca"
+      },
+      "placement": {
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "visible": true,
+      "componentId": "root",
+      "componentLocal": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "assemblyVisible": true
+    }
+  ],
+  "rootComponentProperties": {
+    "color": "#485084",
+    "material": {
+      "name": "Bambu PLA-CF",
+      "density": 1.22
+    }
+  },
+  "assembly": {
+    "version": 1,
+    "designType": "part",
+    "activeId": "root",
+    "components": [],
+    "joints": [],
+    "links": [],
+    "constraints": []
+  },
+  "userParameters": [
+    {
+      "name": "thickness",
+      "unit": "mm",
+      "expression": "8"
+    },
+    {
+      "name": "holeDiameter",
+      "unit": "mm",
+      "expression": "5"
+    }
+  ]
+}

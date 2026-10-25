@@ -1,0 +1,523 @@
+{
+  "format": "personal-pcb",
+  "version": 1,
+  "name": "Manual LED",
+  "thickness": 1.6,
+  "layers": 2,
+  "outline": [
+    [
+      0,
+      0
+    ],
+    [
+      40,
+      0
+    ],
+    [
+      40,
+      25
+    ],
+    [
+      0,
+      25
+    ]
+  ],
+  "cutouts": [],
+  "zones": [],
+  "keepouts": [],
+  "diffPairs": [],
+  "components": [
+    {
+      "id": "component-j1",
+      "ref": "J1",
+      "value": "Supply",
+      "lcsc": "",
+      "dnp": false,
+      "x": 6,
+      "y": 12,
+      "rotation": 0,
+      "side": "top",
+      "footprint": {
+        "id": "Header_1x2",
+        "name": "Pin header 1×2 / 2.54 mm",
+        "prefix": "J",
+        "body": {
+          "width": 2.54,
+          "height": 5.08,
+          "height3d": 8
+        },
+        "pads": [
+          {
+            "number": "1",
+            "x": 0,
+            "y": 1.27,
+            "width": 1.8,
+            "height": 1.8,
+            "drill": 1,
+            "shape": "circle"
+          },
+          {
+            "number": "2",
+            "x": 0,
+            "y": -1.27,
+            "width": 1.8,
+            "height": 1.8,
+            "drill": 1,
+            "shape": "circle"
+          }
+        ]
+      },
+      "padNets": {
+        "1": "VCC",
+        "2": "GND"
+      },
+      "schematicId": "part-j1"
+    },
+    {
+      "id": "component-r1",
+      "ref": "R1",
+      "value": "330 Ω",
+      "lcsc": "",
+      "dnp": false,
+      "x": 16,
+      "y": 14,
+      "rotation": 0,
+      "side": "top",
+      "footprint": {
+        "id": "R_0603",
+        "name": "R_0603",
+        "prefix": "R",
+        "body": {
+          "width": 1.6,
+          "height": 0.8,
+          "height3d": 0.7
+        },
+        "pads": [
+          {
+            "number": "1",
+            "x": -0.8,
+            "y": 0,
+            "width": 0.9,
+            "height": 0.95,
+            "drill": 0,
+            "shape": "rect"
+          },
+          {
+            "number": "2",
+            "x": 0.8,
+            "y": 0,
+            "width": 0.9,
+            "height": 0.95,
+            "drill": 0,
+            "shape": "rect"
+          }
+        ]
+      },
+      "padNets": {
+        "1": "VCC",
+        "2": "LED_A"
+      },
+      "schematicId": "part-r1"
+    },
+    {
+      "id": "component-d1",
+      "ref": "D1",
+      "value": "LED",
+      "lcsc": "",
+      "dnp": false,
+      "x": 28,
+      "y": 14,
+      "rotation": 0,
+      "side": "top",
+      "footprint": {
+        "id": "LED_0805",
+        "name": "LED_0805",
+        "prefix": "D",
+        "body": {
+          "width": 2,
+          "height": 1.25,
+          "height3d": 0.7
+        },
+        "pads": [
+          {
+            "number": "1",
+            "x": -1,
+            "y": 0,
+            "width": 1.1,
+            "height": 1.4,
+            "drill": 0,
+            "shape": "rect"
+          },
+          {
+            "number": "2",
+            "x": 1,
+            "y": 0,
+            "width": 1.1,
+            "height": 1.4,
+            "drill": 0,
+            "shape": "rect"
+          }
+        ]
+      },
+      "padNets": {
+        "1": "LED_A",
+        "2": "GND"
+      },
+      "schematicId": "part-d1"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "track-vcc",
+      "net": "VCC",
+      "layer": "top",
+      "width": 0.25,
+      "points": [
+        [
+          6,
+          13.27
+        ],
+        [
+          8,
+          15.27
+        ],
+        [
+          13.93,
+          15.27
+        ],
+        [
+          15.2,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "track-led-a",
+      "net": "LED_A",
+      "layer": "top",
+      "width": 0.25,
+      "points": [
+        [
+          16.8,
+          14
+        ],
+        [
+          27,
+          14
+        ]
+      ]
+    },
+    {
+      "id": "track-gnd",
+      "net": "GND",
+      "layer": "top",
+      "width": 0.25,
+      "points": [
+        [
+          29,
+          14
+        ],
+        [
+          32,
+          11
+        ],
+        [
+          32,
+          7
+        ],
+        [
+          9.73,
+          7
+        ],
+        [
+          6,
+          10.73
+        ]
+      ]
+    }
+  ],
+  "vias": [],
+  "holes": [],
+  "texts": [],
+  "nets": [
+    "VCC",
+    "GND",
+    "LED_A"
+  ],
+  "rules": {
+    "clearance": 0.2,
+    "minWidth": 0.2,
+    "minDrill": 0.3,
+    "annular": 0.15,
+    "edge": 0.3,
+    "maskExpansion": 0.05
+  },
+  "library": [],
+  "schematic": {
+    "version": 1,
+    "parts": [
+      {
+        "id": "part-j1",
+        "ref": "J1",
+        "value": "Supply",
+        "lcsc": "",
+        "dnp": false,
+        "footprint": {
+          "id": "Header_1x2",
+          "name": "Pin header 1×2 / 2.54 mm",
+          "prefix": "J",
+          "body": {
+            "width": 2.54,
+            "height": 5.08,
+            "height3d": 8
+          },
+          "pads": [
+            {
+              "number": "1",
+              "x": 0,
+              "y": 1.27,
+              "width": 1.8,
+              "height": 1.8,
+              "drill": 1,
+              "shape": "circle"
+            },
+            {
+              "number": "2",
+              "x": 0,
+              "y": -1.27,
+              "width": 1.8,
+              "height": 1.8,
+              "drill": 1,
+              "shape": "circle"
+            }
+          ]
+        },
+        "symbol": {
+          "kind": "connector",
+          "pins": [
+            {
+              "number": "1",
+              "name": "1",
+              "type": "passive",
+              "x": -7,
+              "y": 0
+            },
+            {
+              "number": "2",
+              "name": "2",
+              "type": "passive",
+              "x": 7,
+              "y": 0
+            }
+          ]
+        },
+        "x": 18,
+        "y": 36,
+        "rotation": 0
+      },
+      {
+        "id": "part-r1",
+        "ref": "R1",
+        "value": "330 Ω",
+        "lcsc": "",
+        "dnp": false,
+        "footprint": {
+          "id": "R_0603",
+          "name": "R_0603",
+          "prefix": "R",
+          "body": {
+            "width": 1.6,
+            "height": 0.8,
+            "height3d": 0.7
+          },
+          "pads": [
+            {
+              "number": "1",
+              "x": -0.8,
+              "y": 0,
+              "width": 0.9,
+              "height": 0.95,
+              "drill": 0,
+              "shape": "rect"
+            },
+            {
+              "number": "2",
+              "x": 0.8,
+              "y": 0,
+              "width": 0.9,
+              "height": 0.95,
+              "drill": 0,
+              "shape": "rect"
+            }
+          ]
+        },
+        "symbol": {
+          "kind": "resistor",
+          "pins": [
+            {
+              "number": "1",
+              "name": "1",
+              "type": "passive",
+              "x": -7,
+              "y": 0
+            },
+            {
+              "number": "2",
+              "name": "2",
+              "type": "passive",
+              "x": 7,
+              "y": 0
+            }
+          ]
+        },
+        "x": 52,
+        "y": 24,
+        "rotation": 0
+      },
+      {
+        "id": "part-d1",
+        "ref": "D1",
+        "value": "LED",
+        "lcsc": "",
+        "dnp": false,
+        "footprint": {
+          "id": "LED_0805",
+          "name": "LED_0805",
+          "prefix": "D",
+          "body": {
+            "width": 2,
+            "height": 1.25,
+            "height3d": 0.7
+          },
+          "pads": [
+            {
+              "number": "1",
+              "x": -1,
+              "y": 0,
+              "width": 1.1,
+              "height": 1.4,
+              "drill": 0,
+              "shape": "rect"
+            },
+            {
+              "number": "2",
+              "x": 1,
+              "y": 0,
+              "width": 1.1,
+              "height": 1.4,
+              "drill": 0,
+              "shape": "rect"
+            }
+          ]
+        },
+        "symbol": {
+          "kind": "led",
+          "pins": [
+            {
+              "number": "1",
+              "name": "1",
+              "type": "passive",
+              "x": -7,
+              "y": 0
+            },
+            {
+              "number": "2",
+              "name": "2",
+              "type": "passive",
+              "x": 7,
+              "y": 0
+            }
+          ]
+        },
+        "x": 86,
+        "y": 24,
+        "rotation": 0
+      }
+    ],
+    "wires": [
+      {
+        "id": "wire-vcc",
+        "from": {
+          "partId": "part-j1",
+          "pin": "1"
+        },
+        "to": {
+          "partId": "part-r1",
+          "pin": "1"
+        },
+        "bends": [
+          [
+            11,
+            12
+          ],
+          [
+            45,
+            12
+          ]
+        ]
+      },
+      {
+        "id": "wire-led-a",
+        "from": {
+          "partId": "part-r1",
+          "pin": "2"
+        },
+        "to": {
+          "partId": "part-d1",
+          "pin": "1"
+        },
+        "bends": []
+      },
+      {
+        "id": "wire-gnd",
+        "from": {
+          "partId": "part-d1",
+          "pin": "2"
+        },
+        "to": {
+          "partId": "part-j1",
+          "pin": "2"
+        },
+        "bends": [
+          [
+            93,
+            52
+          ],
+          [
+            25,
+            52
+          ]
+        ]
+      }
+    ],
+    "labels": [
+      {
+        "id": "label-vcc",
+        "name": "VCC",
+        "anchor": {
+          "partId": "part-j1",
+          "pin": "1"
+        }
+      },
+      {
+        "id": "label-led-a",
+        "name": "LED_A",
+        "anchor": {
+          "partId": "part-r1",
+          "pin": "2"
+        }
+      },
+      {
+        "id": "label-gnd",
+        "name": "GND",
+        "anchor": {
+          "partId": "part-j1",
+          "pin": "2"
+        }
+      }
+    ],
+    "junctions": [],
+    "noConnect": []
+  },
+  "id": "manual-led"
+}
